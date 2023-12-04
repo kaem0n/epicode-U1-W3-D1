@@ -209,12 +209,12 @@
         const caption = document.createElement("caption");
         caption.innerText = "Esercizio 11) Nuova tabella.";
         const thead = document.createElement("thead");
-        const tbody = document.createElement("tbody");
+        // const tbody = document.createElement("tbody");
         const theadtr = document.createElement("tr");
-        const tbodytr1 = document.createElement("tr");
-        const tbodytr2 = document.createElement("tr");
-        const tbodytr3 = document.createElement("tr");
-        const tbodytr4 = document.createElement("tr");
+        // const tbodytr1 = document.createElement("tr");
+        // const tbodytr2 = document.createElement("tr");
+        // const tbodytr3 = document.createElement("tr");
+        // const tbodytr4 = document.createElement("tr");
 
         theadtr.appendChild(document.createElement("th")).innerText =
           "Immagine";
@@ -224,34 +224,34 @@
         theadtr.appendChild(document.createElement("th")).innerText = "Prezzo";
         thead.appendChild(theadtr);
 
-        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
 
-        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
 
-        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
 
-        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
 
-        tbody.appendChild(tbodytr1);
-        tbody.appendChild(tbodytr2);
-        tbody.appendChild(tbodytr3);
-        tbody.appendChild(tbodytr4);
+        // tbody.appendChild(tbodytr1);
+        // tbody.appendChild(tbodytr2);
+        // tbody.appendChild(tbodytr3);
+        // tbody.appendChild(tbodytr4);
 
         table.appendChild(caption);
         table.appendChild(thead);
-        table.appendChild(tbody);
+        // table.appendChild(tbody);
 
         tableArea.appendChild(table);
       };
@@ -261,15 +261,37 @@
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
       */
 
-      const addRow = function () {};
+      const addRow = function () {
+        const tbody = document.createElement("tbody");
+        const tr = document.createElement("tr");
+        const img = document.createElement("td");
+        img.innerHTML = '<img src="https://placehold.co/100" />';
+        const name = document.createElement("td");
+        name.innerText = "Nome finto";
+        const qt = document.createElement("td");
+        qt.innerText = "123";
+        const price = document.createElement("td");
+        price.innerText = "456";
 
-      /* ESERCIZIO 14
+        tr.appendChild(img);
+        tr.appendChild(name);
+        tr.appendChild(qt);
+        tr.appendChild(price);
+        tbody.appendChild(tr);
+
+        document.getElementsByTagName("table")[0].appendChild(tbody);
+      };
+      addRow();
+      addRow();
+      addRow();
+
+      /* ESERCIZIO 13
         Crea una funzione che nasconda le immagini della tabella quando eseguita
       */
 
       const hideAllImages = function () {};
 
-      /* EXTRA ESERCIZIO 15
+      /* EXTRA ESERCIZIO 14
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
 
