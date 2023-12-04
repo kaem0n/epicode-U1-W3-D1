@@ -42,7 +42,7 @@
     <div>
       <hr />
       <button onclick="hideFirstUl()">
-        Esercizio 7: Premi per far sparire la prima lista.
+        Esercizio 7: Premi per far sparire la prima lista
       </button>
 
       <ul id="firstList">
@@ -71,6 +71,10 @@
       </h2>
     </div>
 
+    <button onclick="hideAllImages()">
+      Esercizio 13: Premi per far sparire le immagini della tabella
+    </button>
+    <br />
     <div id="tableArea"></div>
 
     <footer>
@@ -209,12 +213,7 @@
         const caption = document.createElement("caption");
         caption.innerText = "Esercizio 11) Nuova tabella.";
         const thead = document.createElement("thead");
-        // const tbody = document.createElement("tbody");
         const theadtr = document.createElement("tr");
-        // const tbodytr1 = document.createElement("tr");
-        // const tbodytr2 = document.createElement("tr");
-        // const tbodytr3 = document.createElement("tr");
-        // const tbodytr4 = document.createElement("tr");
 
         theadtr.appendChild(document.createElement("th")).innerText =
           "Immagine";
@@ -222,36 +221,10 @@
         theadtr.appendChild(document.createElement("th")).innerText =
           "Quantità";
         theadtr.appendChild(document.createElement("th")).innerText = "Prezzo";
+
         thead.appendChild(theadtr);
-
-        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
-
-        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
-
-        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
-
-        // tbodytr1.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr2.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr3.appendChild(document.createElement("td")).innerText = "text";
-        // tbodytr4.appendChild(document.createElement("td")).innerText = "text";
-
-        // tbody.appendChild(tbodytr1);
-        // tbody.appendChild(tbodytr2);
-        // tbody.appendChild(tbodytr3);
-        // tbody.appendChild(tbodytr4);
-
         table.appendChild(caption);
         table.appendChild(thead);
-        // table.appendChild(tbody);
 
         tableArea.appendChild(table);
       };
@@ -289,7 +262,12 @@
         Crea una funzione che nasconda le immagini della tabella quando eseguita
       */
 
-      const hideAllImages = function () {};
+      const hideAllImages = function () {
+        const tableImgs = document.getElementsByTagName("img");
+        for (let i = 0; i < tableImgs.length; i++) {
+          tableImgs[i].style.opacity = "0";
+        }
+      };
 
       /* EXTRA ESERCIZIO 14
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
