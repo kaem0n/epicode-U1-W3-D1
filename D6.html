@@ -191,14 +191,71 @@
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
 
-      const revealFooterLink = function () {};
+      const footer = document.getElementsByTagName("footer")[0];
+      const revealFooterLink = function () {
+        const footerA = document.querySelector("footer a");
+        alert(footerA.getAttribute("href"));
+      };
+      footer.setAttribute("onclick", "revealFooterLink()");
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        const tableArea = document.getElementById("tableArea");
+        const table = document.createElement("table");
+        const caption = document.createElement("caption");
+        caption.innerText = "Esercizio 11) Nuova tabella.";
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+        const theadtr = document.createElement("tr");
+        const tbodytr1 = document.createElement("tr");
+        const tbodytr2 = document.createElement("tr");
+        const tbodytr3 = document.createElement("tr");
+        const tbodytr4 = document.createElement("tr");
+
+        theadtr.appendChild(document.createElement("th")).innerText =
+          "Immagine";
+        theadtr.appendChild(document.createElement("th")).innerText = "Nome";
+        theadtr.appendChild(document.createElement("th")).innerText =
+          "Quantità";
+        theadtr.appendChild(document.createElement("th")).innerText = "Prezzo";
+        thead.appendChild(theadtr);
+
+        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+
+        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+
+        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+
+        tbodytr1.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr2.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr3.appendChild(document.createElement("td")).innerText = "text";
+        tbodytr4.appendChild(document.createElement("td")).innerText = "text";
+
+        tbody.appendChild(tbodytr1);
+        tbody.appendChild(tbodytr2);
+        tbody.appendChild(tbodytr3);
+        tbody.appendChild(tbodytr4);
+
+        table.appendChild(caption);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        tableArea.appendChild(table);
+      };
+      generateTable();
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
